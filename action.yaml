@@ -1,0 +1,16 @@
+name: "Set Up jake"
+description: "Set up and install jake, a make-like task executor for Unix OS"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Set up Rust
+      uses: dtolnay/rust-toolchain@stable
+
+    - name: Install jake
+      run: cargo install jake
+      shell: bash
+
+branding:
+  icon: "chevron-right"
+  color: "black"
